@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.example.lenovo.wedgo.Profile">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#81d4fa" />
+        <ImageView
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />
+    </LinearLayout>
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="20dp"
+    android:layout_marginTop="20dp"
+    android:id="@+id/hi_layout"
+    android:background="@drawable/buttonstyle"
+    >
+  <TextView
+      android:id="@+id/hiTxt"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="20dp"
+      android:text="Hi , "
+      android:textSize="35sp"
+      android:textStyle="italic|bold"
+      android:textColor="@color/black"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:layout_toEndOf="@+id/hiTxt"
+        android:id="@+id/fullname"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        />
+</RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/hi_layout"
+
+        android:layout_marginBottom="10dp"
+        android:background="@color/green2">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/username_txt"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:text="Your Username : "/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/username_txt"
+            android:layout_marginStart="40dp"
+            android:id="@+id/username"
+            android:textSize="20sp"
+            android:text="Username "/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/email_txt"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/username"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:text="Your Email : "/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:id="@+id/email"
+            android:layout_below="@+id/email_txt"
+            android:textSize="20sp"
+            android:text="Your Email : "/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/changePassTxt"
+            android:layout_below="@+id/email"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+            android:text="To Change Password : "
+            android:textStyle="bold"
+            android:textSize="16sp"/>
+        <EditText
+            android:id="@+id/currentPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/changePassTxt"
+            android:inputType="textPassword"
+            android:drawablePadding="20dp"
+            android:drawableRight="@drawable/ic_pass"
+            android:hint="Current Password"
+            android:textSize="15sp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="100dp"
+            android:layout_marginTop="2dp"
+            />
+        <EditText
+            android:id="@+id/newPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:drawablePadding="20dp"
+            android:drawableRight="@drawable/ic_pass"
+            android:hint="New Password"
+            android:textSize="15sp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="100dp"
+            android:layout_below="@+id/currentPass"/>
+        <EditText
+            android:id="@+id/newPassConfirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:drawablePadding="20dp"
+            android:drawableRight="@drawable/ic_pass"
+            android:hint="Confirm New Password"
+            android:textSize="15sp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="100dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@+id/newPass"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:layout_marginStart="30dp"
+            android:layout_below="@+id/newPassConfirm"
+            android:layout_marginBottom="20dp"
+
+            >
+
+            <Button
+                android:id="@+id/changePass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/buttonstyle"
+                android:text="Change Password"
+                android:textSize="12sp"
+                android:textAllCaps="false"
+                android:textColor="@color/black" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ProgressBar
+            android:id="@+id/pBar"
+            android:max="100"
+            android:background="@color/projectColor"
+            android:progress="100"
+            android:layout_marginTop="250dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible"
+            android:layout_centerHorizontal="true"
+            />
+        <TextView
+            android:id="@+id/textinpBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="250dp"
+
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="Wedgo"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            android:textColor="@color/black"
+            />
+    </RelativeLayout>
+</RelativeLayout>
